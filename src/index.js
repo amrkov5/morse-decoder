@@ -42,7 +42,7 @@ function decode(expr) {
     for (let i = 0; i<expr.length; i+=10) {
         let letter = ''
         if (expr.slice(i,i+10) != '**********') {
-            result = result + MORSE_TABLE[expr.slice(i, (i + 10)).replaceAll('00','').replaceAll('10','.').replaceAll('11','-').replaceAll('**********', ' ')]
+            result = result + MORSE_TABLE[expr.slice(i, (i + 10)).replaceAll('00','').replaceAll('10','.').replaceAll('11','-')]
         } else {result = result + ' '}
     }
     return result
